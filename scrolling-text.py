@@ -19,7 +19,7 @@ x = GalacticUnicorn.WIDTH
 y = 2
 
 while True:
-    x = max(x - 1, GalacticUnicorn.WIDTH - width)
+    x = max(x - 1, min(GalacticUnicorn.WIDTH - width, 1))
 
     graphics.set_pen(graphics.create_pen(*background))
     graphics.clear()
