@@ -31,5 +31,5 @@ mpremote fs cp secrets.py :secrets.py
 To test everything is working, run the example:
 
 ```bash
-mpremote run wlan_connectivity.py
+mpremote run wlan-connectivity.py
 ```
