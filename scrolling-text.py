@@ -17,9 +17,15 @@ width = graphics.measure_text(message, scale = scale, spacing = spacing)
 
 x = GalacticUnicorn.WIDTH
 y = 2
+step = -1
 
 while True:
-    x = max(x - 1, min(GalacticUnicorn.WIDTH - width, 1))
+    lower_limit = min(GalacticUnicorn.WIDTH - width, 1)
+    upper_limit = GalacticUnicorn.WIDTH + 1
+    x = min(max(x + step, lower_limit), upper_limit)
+
+    if x == lower_limit or x == upper_limit:
+        step *= -1
 
     graphics.set_pen(graphics.create_pen(*background))
     graphics.clear()
